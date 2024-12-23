@@ -26,8 +26,10 @@ export const useDeleteTask = () => {
         },
         onSuccess:({data}:any) => {
             toast.success('Task deleted')
+            queryClient.invalidateQueries({queryKey:['project-analytics']})
+            queryClient.invalidateQueries({queryKey:['workspace-analytics']})
             queryClient.invalidateQueries({queryKey:['tasks']})
-            queryClient.invalidateQueries({queryKey:['tasks', data.$id]})
+            queryClient.invalidateQueries({queryKey:['task', data.$id]})
         },
         onError:() => {
             toast.error('Failed to delete task')

@@ -24,4 +24,4 @@ export const useGetTask = ({taskID}:UseGetTaskProps) => {
     })
 
     return query;
-} 
+}  
