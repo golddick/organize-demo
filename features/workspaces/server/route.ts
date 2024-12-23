@@ -19,6 +19,11 @@ const app = new Hono()
     const user = c.get('user')
     const databases = c.get('databases')
 
+    if (!user) {
+        console.log('no user')
+        return c.json({ error: 'no user' }, 401);
+    }
+
     const members = await databases.listDocuments(
         DATABASE_ID,
         MEMBERS_ID,
