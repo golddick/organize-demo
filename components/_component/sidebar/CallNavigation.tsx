@@ -4,8 +4,10 @@ import { cn } from '@/lib/utils'
 import { SettingsIcon, User2Icon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
-import { GoHome, GoHomeFill, GoCheckCircle, GoCheckCircleFill} from 'react-icons/go'
+import { FaRegClock } from "react-icons/fa6";
+import { FaClock } from "react-icons/fa";
 import { IoCallOutline , IoCall} from "react-icons/io5";
+import { IoVideocamOutline, IoVideocamSharp, IoPersonOutline, IoPersonSharp } from "react-icons/io5";
 import { useWorkspaceID } from '@/features/workspaces/hooks/use-workspaceID'
 import { usePathname } from 'next/navigation'
 
@@ -13,29 +15,29 @@ const routes = [
 
 
     {
-        label:'ORGANIZE Call',
+        label:' Call',
         href:`/call`,
         icon:IoCallOutline,
         activeIcon: IoCall,
     },
     {
-        label: 'Upcoming',
+        label: 'Upcoming Call',
         href:'/call/upcoming',
-        icon:IoCallOutline,
-        activeIcon: IoCall,
+        icon:FaRegClock,
+        activeIcon: FaClock,
     },
 
     {
-        label: 'Recordings',
+        label: 'Recorded Calls',
         href:'/call/recordings',
-        icon:IoCallOutline,
-        activeIcon: IoCall,
+        icon:IoVideocamOutline,
+        activeIcon: IoVideocamSharp,
     },
     {
         label: 'Personal Room',
         href:'/call/personal',
-        icon:IoCallOutline,
-        activeIcon: IoCall,
+        icon:IoPersonOutline,
+        activeIcon: IoPersonSharp,
     },
 ]
 

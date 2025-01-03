@@ -16,12 +16,12 @@ const page = async () => {
 
 
   
-  // if(user){
-  //   redirect(`/workspaces/${workspaceID} `)
-  //  }
+  if(user){
+    redirect(`/workspaces/${workspaceID} `)
+   }
   
   
-  if (user || workspaces?.total === 0) {
+  if ( workspaces?.total === 0  ) {
     redirect("/workspaces/create")
   }else{
       redirect(`/workspaces/${workspaceID}`)

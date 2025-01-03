@@ -2,7 +2,21 @@ import { UserButton } from "@/features/auth/components/user-button";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function RootLayout({
+import { Metadata } from "next";
+
+
+
+
+
+export const metadata: Metadata = {
+  title: "ORGANIZE",
+  description: " A TASK AND A CALL APP ",
+  icons:{
+    icon: '/icons/gnb.png'
+  }
+};
+
+export default function SinglePageLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

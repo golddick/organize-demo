@@ -137,10 +137,10 @@ export const MeetingTypeList = () => {
         />
         <MeetingCard
         Icon={<VideoIcon/>}
-        header=' Recordings'
-        info='Meeting Recordings'
+        header=' Upcoming'
+        info='Upcoming Meeting '
         className='bg-black'
-        onClick={() => router.push('/recordings')}
+        onClick={() => router.push(`/workspaces/${workspaceID}/call`)}
         />
         {!callDetails ? (
             <MeetingModal

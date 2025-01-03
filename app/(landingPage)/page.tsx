@@ -3,6 +3,7 @@ import { getWorkspaces } from '@/features/workspaces/queries'
 import { redirect } from 'next/navigation'
 import React from 'react'
 
+
 const page = async () => {
 const user = await getCurrent()
 

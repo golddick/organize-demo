@@ -9,8 +9,6 @@ const page = async () => {
 
   const user = await getCurrent()
 
-  console.log('user', user)
-
   if (user) redirect('/')
 
   return (
