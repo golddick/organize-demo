@@ -6,16 +6,22 @@ import { redirect } from "next/navigation";
 
 const page = async () => {
   const user = await getCurrent()
-
   if (!user) {
     redirect("/sign-up")
   }
-  
+
+
   const workspaces = await getWorkspaces()
   const workspaceID = workspaces?.documents[0]?.$id
+
+
+  
+  // if(user){
+  //   redirect(`/workspaces/${workspaceID} `)
+  //  }
   
   
-  if (workspaces?.total === 0) {
+  if (user || workspaces?.total === 0) {
     redirect("/workspaces/create")
   }else{
       redirect(`/workspaces/${workspaceID}`)

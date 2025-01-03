@@ -37,7 +37,7 @@ async (c) => {
       )
 
       setCookie(c, AUTH_COOKIE, session.secret, {
-        path: "/",
+        path: "/space",
         httpOnly: true,
         secure: true,
         sameSite: "strict",

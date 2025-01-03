@@ -10,34 +10,36 @@ import { useWorkspaceID } from '@/features/workspaces/hooks/use-workspaceID'
 import { usePathname } from 'next/navigation'
 
 const routes = [
+
+
     {
-        label:'Home',
-        href:'',
-        icon:GoHome,
-        activeIcon: GoHomeFill,
+        label:'ORGANIZE Call',
+        href:`/call`,
+        icon:IoCallOutline,
+        activeIcon: IoCall,
     },
     {
-        label:'My Tasks',
-        href:'/tasks',
-        icon:GoCheckCircle,
-        activeIcon: GoCheckCircleFill,
-    },
-    {
-        label:'My Setting',
-        href:'/settings',
-        icon:SettingsIcon,
-        activeIcon: SettingsIcon,
-    },
-    {
-        label:'Members',
-        href:'/members',
-        icon:User2Icon,
-        activeIcon: User2Icon,
+        label: 'Upcoming',
+        href:'/call/upcoming',
+        icon:IoCallOutline,
+        activeIcon: IoCall,
     },
 
+    {
+        label: 'Recordings',
+        href:'/call/recordings',
+        icon:IoCallOutline,
+        activeIcon: IoCall,
+    },
+    {
+        label: 'Personal Room',
+        href:'/call/personal',
+        icon:IoCallOutline,
+        activeIcon: IoCall,
+    },
 ]
 
-const Navigation = () => {
+const CallNavigation = () => {
     const workspaceID = useWorkspaceID()
     const pathName = usePathname()
 
@@ -64,4 +66,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default CallNavigation

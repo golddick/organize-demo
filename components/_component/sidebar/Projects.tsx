@@ -14,6 +14,9 @@ const workspaceID = useWorkspaceID()
 const {data} = useGetProject({workspaceID})
 const pathname = usePathname()
 
+if (!workspaceID) {
+   console.log('no workspace id')
+  }
 
 const {open } = useCreateProjectModal()
 

@@ -1,7 +1,7 @@
 import { useParams } from "next/navigation"
 
-export const useWorkspaceID = () => {
+export const useCallID = () => {
  const params = useParams()
- return params.workspaceID as string
+ return params.callID as string
 }
   
